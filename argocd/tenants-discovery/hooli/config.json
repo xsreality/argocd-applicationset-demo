@@ -1,0 +1,12 @@
+{
+  "tenant": {
+    "owner": "gavin.belson@hooli.com",
+    "name": "Hooli",
+    "id": "hooli"
+  },
+  "k8s_cluster": {
+    "owner": "admin@company.com",
+    "address": "https://kubernetes.default.svc",
+    "namespace": "argocd"
+  }
+}
