@@ -5,7 +5,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
+        repoURL: https://github.com/xsreality/argocd-applicationset-demo.git
         revision: main
         files:
           - path: "argocd/tenants-discovery/**/config.json"
@@ -15,7 +15,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
+        repoURL: https://github.com/xsreality/argocd-applicationset-demo.git
         targetRevision: main
         path: 'tenants/{{tenant.id}}'
         helm:
