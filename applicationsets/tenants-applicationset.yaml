@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: tenants
+spec:
+  generators:
+    - git:
+        repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
+        revision: main
+        files:
+          - path: "argocd/tenants-discovery/**/config.json"
+  template:
+    metadata:
+      name: '{{tenant.name}}-tenant'
+    spec:
+      project: default
+      source:
+        repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
+        targetRevision: main
+        path: 'apps/tenants/{{tenant.name}}'
+        helm:
+          valueFiles:
+            - values.{{tenant.name}}.yaml
+      destination:
+        server: 'https://kubernetes.default.svc'
+        namespace: argocd
+      syncPolicy: { }
