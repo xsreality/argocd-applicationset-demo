@@ -11,16 +11,16 @@ spec:
           - path: "argocd/tenants-discovery/**/config.json"
   template:
     metadata:
-      name: '{{tenant.name}}-tenant'
+      name: '{{tenant.id}}'
     spec:
       project: default
       source:
         repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
         targetRevision: main
-        path: 'tenants/{{tenant.name}}'
+        path: 'tenants/{{tenant.id}}'
         helm:
           valueFiles:
-            - values.{{tenant.name}}.yaml
+            - values.{{tenant.id}}.yaml
       destination:
         server: '{{k8s_cluster.address}}'
         namespace: '{{k8s_cluster.namespace}}'
