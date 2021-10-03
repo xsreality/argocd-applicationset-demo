@@ -17,11 +17,11 @@ spec:
       source:
         repoURL: git@github.com:xsreality/argocd-applicationset-demo.git
         targetRevision: main
-        path: 'apps/tenants/{{tenant.name}}'
+        path: 'tenants/{{tenant.name}}'
         helm:
           valueFiles:
             - values.{{tenant.name}}.yaml
       destination:
-        server: 'https://kubernetes.default.svc'
-        namespace: argocd
+        server: '{{k8s_cluster.address}}'
+        namespace: '{{k8s_cluster.namespace}}'
       syncPolicy: { }
