@@ -1,0 +1,19 @@
+## Override Wordpress for ECorp in this file
+wordpress:
+  wordpressUsername: phillip
+  ## Admin email
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressEmail: phillip.price@ecorp.com
+  ## First name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressFirstName: Phillip
+  ## Last name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressLastName: Price
+  ## Blog name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressBlogName: ECorp's Blog!

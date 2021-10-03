@@ -1,0 +1,19 @@
+## Override Wordpress for Hooli in this file
+wordpress:
+  wordpressUsername: gavin
+  ## Admin email
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressEmail: gavin.belson@hooli.com
+  ## First name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressFirstName: Gavin
+  ## Last name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressLastName: Belson
+  ## Blog name
+  ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
+  ##
+  wordpressBlogName: Hooli's Blog!
