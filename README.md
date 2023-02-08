@@ -3,13 +3,14 @@
 This repository contains example configuration for deploying
 Argo CD Applications with [ApplicationSet Controller](https://argocd-applicationset.readthedocs.io/en/stable/).
 
+> Tested with ArgoCD v2.5.10
+
 ## Deploying the example
 
 ### Pre-requisites
 
 1. Kubernetes cluster with `argocd` namespace.
-2. Argo CD deployed in `argocd` namespace. Quick deploy: `helm upgrade --install argocd-demo argo/argo-cd -n argocd`
-3. Argo CD ApplicationSet Controller deployed in `argocd` namespace. Quick deploy: `helm upgrade --install argocd-appset-demo argo/argocd-applicationset -n argocd`
+2. Argo CD deployed in `argocd` namespace. Quick deploy: `helm upgrade --install argocd-demo argo/argo-cd -n argocd`. This also deploys the ApplicationSet controller.
 
 ### Deploy Top-Level Application
 
